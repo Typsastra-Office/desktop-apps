@@ -235,8 +235,8 @@ utils.defines.FileFormat = {
 
 utils.defines.DBLCLICK_LOCK_TIMEOUT = 800;
 utils.defines.links = {
-    regnew: 'https://www.onlyoffice.com/registration.aspx?app=desktop',
-    restorepass: 'https://www.onlyoffice.com/signin.aspx'
+    regnew: 'https://github.com/Typsastra-Office',
+    restorepass: 'https://github.com/Typsastra-Office'
 };
 
 utils.formatToEditor = function(f) {

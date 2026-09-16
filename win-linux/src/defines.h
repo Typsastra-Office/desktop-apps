@@ -39,34 +39,34 @@
 #define reCmdLang           "--(keep)?lang[:|=](\\w{2,5})"
 
 #define APP_NAME "DesktopEditors"
-#define APP_TITLE "ONLYOFFICE"
+#define APP_TITLE "Typsastra Office"
 #ifdef __linux
-# define APP_DATA_PATH "/onlyoffice/desktopeditors"
-# define REG_GROUP_KEY "onlyoffice"
+# define APP_DATA_PATH "/typsastra/typsastraoffice"
+# define REG_GROUP_KEY "typsastra"
 # define APP_MUTEX_NAME "asc:editors"
-# define DESKTOP_FILE_NAME "onlyoffice-desktopeditors"
+# define DESKTOP_FILE_NAME "typsastra-office"
 #else
-# define APP_DATA_PATH "/ONLYOFFICE/DesktopEditors"
-# define APP_REG_NAME  "ONLYOFFICE"
-# define REG_GROUP_KEY "ONLYOFFICE"
-# define REG_UNINST_KEY "ONLYOFFICE Desktop Editors"
+# define APP_DATA_PATH "/Typsastra/TypsastraOffice"
+# define APP_REG_NAME  "TypsastraOffice"
+# define REG_GROUP_KEY "Typsastra"
+# define REG_UNINST_KEY "Typsastra Office"
 # define APP_MUTEX_NAME "TEAMLAB"
 #endif
 
-#define WINDOW_NAME "ONLYOFFICE"
+#define WINDOW_NAME "Typsastra Office"
 #define WINDOW_TITLE WINDOW_NAME
 #define WINDOW_CLASS_NAME L"DocEditorsWindowClass"
 #define WINDOW_EDITOR_CLASS_NAME L"SingleWindowClass"
 #define REG_APP_NAME "DesktopEditors"
 #define APP_DEFAULT_LOCALE "en-US"
 #define APP_DEFAULT_SYSTEM_LOCALE 1
-#define APP_USER_MODEL_ID "ASC.Documents.5"
-#define APP_SIMPLE_WINDOW_TITLE "ONLYOFFICE Editor"
-#define APP_PROTOCOL "oo-office"
-#define FILE_PREFIX "onlyoffice_"
+#define APP_USER_MODEL_ID "Typsastra.Office.1"
+#define APP_SIMPLE_WINDOW_TITLE "Typsastra Office"
+#define APP_PROTOCOL "typsastra-office"
+#define FILE_PREFIX "typsastra_"
 
-#define URL_SITE                "http://www.onlyoffice.com"
-#define URL_SIGNUP              "https://onlyoffice.com/registration.aspx?desktop=true"
+#define URL_SITE                "https://github.com/Typsastra-Office"
+#define URL_SIGNUP              "https://github.com/Typsastra-Office"
 
 #define GET_REGISTRY_USER(variable) \
     QSettings variable(QSettings::NativeFormat, QSettings::UserScope, REG_GROUP_KEY, REG_APP_NAME);
@@ -80,8 +80,8 @@
 #define ACTIONPANEL_ACTIVATE    ACTIONPANEL_CONNECT + 1
 
 #define URL_AGPL "https://www.gnu.org/licenses/agpl-3.0.en.html"
-#define DOWNLOAD_PAGE "https://www.onlyoffice.com/en/download-desktop.aspx"
-#define RELEASE_NOTES "https://github.com/ONLYOFFICE/DesktopEditors/blob/master/CHANGELOG.md"
+#define DOWNLOAD_PAGE "https://github.com/Typsastra-Office/DesktopEditors/releases"
+#define RELEASE_NOTES "https://github.com/Typsastra-Office/DesktopEditors/blob/master/CHANGELOG.md"
 
 #ifdef __linux
 typedef unsigned char BYTE;
