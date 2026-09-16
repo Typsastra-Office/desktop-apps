@@ -133,7 +133,7 @@ void CMainPanelImpl::updateScaling(double dpiratio)
     CMainPanel::updateScaling(dpiratio);
 
     m_pButtonMain->setIcon(":/logo.svg", AscAppManager::themes().current().isDark() ? "logo-light" : "logo-dark");
-    m_pButtonMain->setIconSize(QSize(85,20)*dpiratio);
+    m_pButtonMain->setIconSize(QSize(144,31)*dpiratio);
 }
 
 void CMainPanelImpl::applyTheme(const std::wstring& theme)
@@ -142,7 +142,7 @@ void CMainPanelImpl::applyTheme(const std::wstring& theme)
 
     double dpiratio = scaling();
     m_pButtonMain->setIcon(":/logo.svg", AscAppManager::themes().current().isDark() ? "logo-light" : "logo-dark");
-    m_pButtonMain->setIconSize(QSize(85,20)*dpiratio);
+    m_pButtonMain->setIconSize(QSize(144,31)*dpiratio);
 }
 
 void CMainPanelImpl::onLocalOptions(const QString& json)
