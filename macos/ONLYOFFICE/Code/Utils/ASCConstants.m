@@ -109,9 +109,9 @@
     }
 
     NSDictionary * appInfo = @{
-                               kRegHelpUrl: @"https://onlyoffice.com/desktopeditors.aspx",
-                               kHelpUrl: @"http://helpcenter.onlyoffice.com/%@ONLYOFFICE-Editors/index.aspx",
-                               kRegistrationPortalUrl: @"https://onlyoffice.com/registration.aspx?desktop=true"
+                               kRegHelpUrl: @"https://github.com/Typsastra-Office/DesktopEditors",
+                               kHelpUrl: @"https://github.com/Typsastra-Office/DesktopEditors/issues",
+                               kRegistrationPortalUrl: @"https://github.com/Typsastra-Office"
                                };
 
     return appInfo[key];

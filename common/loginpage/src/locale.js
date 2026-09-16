@@ -45,7 +45,7 @@ l10n.en = {
     btnNext: 'Next',
     portalEmptyTitle: 'Connect to your cloud',
     portalEmptyDescr: 'Store your documents in the cloud and access them any time, from anywhere. Share and collaborate on them. Chat in your doc, add comments or share it for review.',
-    portalEmptyAdv1: 'Don\'t have a cloud account yet? Go online with ONLYOFFICE Cloud Service and <br />try collaborative capabilities for free.',
+    portalEmptyAdv1: 'Don\'t have a cloud account yet? Create a cloud office and <br />try collaborative capabilities for free.',
     portalListTitle: 'Connected clouds',
     textNoFiles: 'There are no files',
     listRecoveryTitle:'Recover files',

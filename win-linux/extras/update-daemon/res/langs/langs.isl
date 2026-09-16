@@ -1,6 +1,6 @@
 
-en.CAPTION_TEXT =ONLYOFFICE Update Service
-en_GB.CAPTION_TEXT =ONLYOFFICE Update Service
+en.CAPTION_TEXT =Typsastra Update Service
+en_GB.CAPTION_TEXT =Typsastra Update Service
 ru.CAPTION_TEXT =Сервис обновлений ONLYOFFICE
 ar_SA.CAPTION_TEXT =خدمة تحديث ONLYOFFICE
 de.CAPTION_TEXT =Aktualisierungsdienst von ONLYOFFICE
@@ -16,7 +16,7 @@ fi.CAPTION_TEXT =ONLYOFFICE Päivityspalvelu
 hy.CAPTION_TEXT =ONLYOFFICE-ի թարմացման ծառայություն
 ko.CAPTION_TEXT =ONLYOFFICE 업데이트 서비스
 lv.CAPTION_TEXT =ONLYOFFICE atjaunināšanas pakalpojums
-nl.CAPTION_TEXT =ONLYOFFICE Update Service
+nl.CAPTION_TEXT =Typsastra Update Service
 pl.CAPTION_TEXT =Usługa aktualizacji ONLYOFFICE
 pt_PT.CAPTION_TEXT =Serviço de atualização ONLYOFFICE
 sk.CAPTION_TEXT =Servis aktualizácie ONLYOFFICE
