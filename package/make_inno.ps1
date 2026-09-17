@@ -60,6 +60,16 @@ elseif ($Target -like "xp*") {
 $InnoPath
 $env:Path = "$InnoPath;$env:Path"
 
+# Make the compiler's Languages folder complete: the official Inno install only
+# ships a subset of the message files, so copy the ones bundled with the repo
+# (desktop-apps/package/inno/languages) next to the compiler.
+$BundledLangs = Join-Path $PSScriptRoot "inno\languages"
+if (Test-Path $BundledLangs) {
+    $InnoLangs = Join-Path $InnoPath "Languages"
+    if (-not (Test-Path $InnoLangs)) { New-Item -ItemType Directory -Force -Path $InnoLangs | Out-Null }
+    Copy-Item -Path (Join-Path $BundledLangs "*") -Destination $InnoLangs -Force -ErrorAction SilentlyContinue
+}
+
 ####
 
 if ($Target -notlike "*update") {
