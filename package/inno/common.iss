@@ -1,4 +1,4 @@
-﻿; -- Installer Common --
+; -- Installer Common --
 
 #ifndef BRANDING_DIR
 #define BRANDING_DIR '.'
@@ -74,14 +74,16 @@ PrivilegesRequired        =admin
 AppMutex                  ={code:getAppMutex}
 ChangesAssociations       =yes
 ChangesEnvironment        =yes
-SetupMutex                =ASC
+SetupMutex                =Typsastra
 
-#if Ver < EncodeVer(6,0,0) & ARCH == "x64"
-ArchitecturesAllowed              = x64
-ArchitecturesInstallIn64BitMode   = x64
-#elif Ver >= EncodeVer(6,0,0) & ARCH == "x64"
+#if ARCH == "x64"
+# if Ver >= EncodeVer(6,3,0)
 ArchitecturesAllowed              = x64compatible
 ArchitecturesInstallIn64BitMode   = x64compatible
+# else
+ArchitecturesAllowed              = x64
+ArchitecturesInstallIn64BitMode   = x64
+# endif
 #elif ARCH == "arm64"
 ArchitecturesAllowed              = arm64
 ArchitecturesInstallIn64BitMode   = arm64
@@ -97,7 +99,11 @@ OutputBaseFileName                ={#OUTPUT_FILE}
 SignTool                  =byparam $p
 #endif
 
+#if FileExists(BRANDING_DIR + '\res\desktopeditors.ico')
+SetupIconFile={#BRANDING_DIR}\res\desktopeditors.ico
+#else
 SetupIconFile={#BRANDING_DIR}\..\..\win-linux\extras\projicons\res\icons\desktopeditors.ico
+#endif
 WizardStyle=classic dynamic
 WizardSizePercent=100
 WizardImageFile={#BRANDING_DIR}\res\WizImage-Light-*.png
@@ -117,64 +123,152 @@ LZMAUseSeparateProcess=yes
 [Languages]
 #ifdef _ONLYOFFICE
 Name: en; MessagesFile: compiler:Default.isl;
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Russian.isl')
 Name: ru; MessagesFile: compiler:Languages\Russian.isl;
+#endif
 #else
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Russian.isl')
 Name: ru; MessagesFile: compiler:Languages\Russian.isl;
+#endif
 Name: en; MessagesFile: compiler:Default.isl;
 #endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Bulgarian.isl')
 Name: bg; MessagesFile: compiler:Languages\Bulgarian.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Catalan.isl')
 Name: ca; MessagesFile: compiler:Languages\Catalan.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Czech.isl')
 Name: cs; MessagesFile: compiler:Languages\Czech.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Greek.isl')
 Name: el; MessagesFile: compiler:Languages\Greek.isl;
+#endif
 ;Name: et; MessagesFile: compiler:Languages\Estonian.isl;
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Finnish.isl')
 Name: fi; MessagesFile: compiler:Languages\Finnish.isl;
+#endif
 ;Name: lt; MessagesFile: compiler:Languages\Lithuanian.isl;
 Name: lo; MessagesFile: compiler:Default.isl;
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Dutch.isl')
 Name: nl; MessagesFile: compiler:Languages\Dutch.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\German.isl')
 Name: de; MessagesFile: compiler:Languages\German.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\French.isl')
 Name: fr; MessagesFile: compiler:Languages\French.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Spanish.isl')
 Name: es; MessagesFile: compiler:Languages\Spanish.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\BrazilianPortuguese.isl')
 Name: pt_BR; MessagesFile: compiler:Languages\BrazilianPortuguese.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Portuguese.isl')
 Name: pt_PT; MessagesFile: compiler:Languages\Portuguese.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Indonesian.isl')
 Name: id; MessagesFile: compiler:Languages\Indonesian.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Italian.isl')
 Name: it_IT; MessagesFile: compiler:Languages\Italian.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Polish.isl')
 Name: pl; MessagesFile: compiler:Languages\Polish.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Romanian.isl')
 Name: ro; MessagesFile: compiler:Languages\Romanian.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Slovak.isl')
 Name: sk; MessagesFile: compiler:Languages\Slovak.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Slovenian.isl')
 Name: sl; MessagesFile: compiler:Languages\Slovenian.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Swedish.isl')
 Name: sv; MessagesFile: compiler:Languages\Swedish.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Turkish.isl')
 Name: tr; MessagesFile: compiler:Languages\Turkish.isl;
+#endif
 #if Int(DecodeVer(PREPROCVER,1)) < 6
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Vietnamese.islu')
 Name: vi; MessagesFile: compiler:Languages\Vietnamese.islu;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Armenian.islu')
 Name: hy_AM; MessagesFile: compiler:Languages\Armenian.islu;
+#endif
 #else
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Vietnamese.isl')
 Name: vi; MessagesFile: compiler:Languages\Vietnamese.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Armenian.isl')
 Name: hy_AM; MessagesFile: compiler:Languages\Armenian.isl;
 #endif
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\ChineseSimplified.isl')
 Name: zh_CN; MessagesFile: compiler:Languages\ChineseSimplified.isl;
+#endif
 ;Name: hy_AM; MessagesFile: compiler:Languages\Armenian.islu;
 ;Name: hr; MessagesFile: compiler:Languages\Croatian.isl;
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Danish.isl')
 Name: da; MessagesFile: compiler:Languages\Danish.isl;
+#endif
 ;Name: hi; MessagesFile: compiler:Languages\Hindi.islu;
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Hungarian.isl')
 Name: hu; MessagesFile: compiler:Languages\Hungarian.isl;
+#endif
 ;Name: ga_IE; MessagesFile: compiler:Default.isl;
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Japanese.isl')
 Name: ja; MessagesFile: compiler:Languages\Japanese.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Korean.isl')
 Name: ko; MessagesFile: compiler:Languages\Korean.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Latvian.isl')
 Name: lv; MessagesFile: compiler:Languages\Latvian.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Norwegian.isl')
 Name: no; MessagesFile: compiler:Languages\Norwegian.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Ukrainian.isl')
 Name: uk; MessagesFile: compiler:Languages\Ukrainian.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Belarusian.isl')
 Name: be; MessagesFile: compiler:Languages\Belarusian.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Galician.isl')
 Name: gl; MessagesFile: compiler:Languages\Galician.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Sinhala.islu')
 Name: si; MessagesFile: compiler:Languages\Sinhala.islu;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\ChineseTraditional.isl')
 Name: zh_TW; MessagesFile: compiler:Languages\ChineseTraditional.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Arabic.isl')
 Name: ar_SA; MessagesFile: compiler:Languages\Arabic.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\SerbianLatin.isl')
 Name: sr_Latn_RS; MessagesFile: compiler:Languages\SerbianLatin.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\SerbianCyrillic.isl')
 Name: sr_Cyrl_RS; MessagesFile: compiler:Languages\SerbianCyrillic.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\EnglishBritish.isl')
 Name: en_GB; MessagesFile: compiler:Languages\EnglishBritish.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Hebrew.isl')
 Name: he; MessagesFile: compiler:Languages\Hebrew.isl;
+#endif
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Albanian.isl')
 Name: sq; MessagesFile: compiler:Languages\Albanian.isl;
+#endif
 #if Ver >= EncodeVer(6,1,1)
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Urdu.isl')
 Name: ur; MessagesFile: compiler:Languages\Urdu.isl;
+#endif
 #endif
 
 [LangOptions]
@@ -183,7 +277,9 @@ lo.LanguageName=ພາສາລາວ
 ;ga_IE.LanguageName=Gaeilge
 ar_SA.LanguageName=الْعَرَبِيَّة
 #if Ver >= EncodeVer(6,1,1)
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Urdu.isl')
 ur.RightToLeft=yes
+#endif
 #endif
 
 [CustomMessages]
