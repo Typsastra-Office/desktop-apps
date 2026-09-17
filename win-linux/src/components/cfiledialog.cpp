@@ -52,6 +52,10 @@ static const char *IMAGE_TYPE = "image",
                   *VIDEO_TYPE = "video",
                   *AUDIO_TYPE = "audio";
 
+namespace {
+    constexpr int PDF_ENHANCED_UNICODE_FILTER = -2;
+}
+
 namespace CFileDialogHelper {
     auto useModalDialog() -> bool {
 #if defined(__linux__) && defined(FILEDIALOG_DONT_USE_MODAL)
@@ -101,6 +105,7 @@ CFileDialogWrapper::CFileDialogWrapper(QWidget * parent) : QObject(parent)
     m_mapFilters[AVS_OFFICESTUDIO_FILE_SPREADSHEET_CSV]     = tr("CSV File (*.csv)");
 
     m_mapFilters[AVS_OFFICESTUDIO_FILE_CROSSPLATFORM_PDF]   = tr("PDF File (*.pdf)");
+    m_mapFilters[PDF_ENHANCED_UNICODE_FILTER]                = tr("PDF Enhanced Unicode (*.pdf)");
     m_mapFilters[AVS_OFFICESTUDIO_FILE_CROSSPLATFORM_PDFA]  = tr("PDFA File (*.pdf)");
     m_mapFilters[AVS_OFFICESTUDIO_FILE_CROSSPLATFORM_DJVU]  = tr("DJVU File (*.djvu)");
     m_mapFilters[AVS_OFFICESTUDIO_FILE_CROSSPLATFORM_XPS]   = tr("XPS File (*.xps)");
@@ -462,16 +467,17 @@ void CFileDialogWrapper::setTitle(const QString &title)
     m_title = title;
 }
 
-void CFileDialogWrapper::setFormats(std::vector<int>& vf)
+void CFileDialogWrapper::setFormats(std::vector<int>& vf, bool enhancedUnicodeAvailable)
 {
     m_filters.clear();
 
-    if ( vf.size() ) {
-        std::vector<int>::iterator i = vf.begin();
-        m_filters = m_mapFilters.value(*(i++));
-        while (i != vf.end()) {
-            m_filters += ";;" + m_mapFilters.value(*(i++));
-        }
+    for (std::vector<int>::const_iterator i = vf.begin(); i != vf.end(); ++i) {
+        if (!m_filters.isEmpty())
+            m_filters += ";;";
+        m_filters += m_mapFilters.value(*i);
+
+        if (enhancedUnicodeAvailable && *i == AVS_OFFICESTUDIO_FILE_CROSSPLATFORM_PDF)
+            m_filters += ";;" + m_mapFilters.value(PDF_ENHANCED_UNICODE_FILTER);
     }
 }
 
@@ -519,7 +525,12 @@ void CFileDialogWrapper::checkForMimeTypes(QStringList &files, const QString &ty
 
 int CFileDialogWrapper::getFormat()
 {
-    return m_format;
+    return isEnhancedUnicode() ? AVS_OFFICESTUDIO_FILE_CROSSPLATFORM_PDF : m_format;
+}
+
+bool CFileDialogWrapper::isEnhancedUnicode() const
+{
+    return m_format == PDF_ENHANCED_UNICODE_FILTER;
 }
 
 //QString CFileDialogWrapper::joinFilters() const

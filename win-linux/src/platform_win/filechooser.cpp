@@ -70,7 +70,7 @@ auto stringToFilters(const wstring& wstr) -> specvector {
     if ( !wstr.empty() ) {
         auto _parce_filter_string = [](const wstring& fullstr, size_t start, size_t stop) -> pair<wstring, wstring> {
             wstring filter_name = fullstr.substr(start, stop - start);
-            size_t mid = filter_name.find(L"(") + 1;
+            size_t mid = filter_name.rfind(L"(") + 1;
             wstring filter_pattern = filter_name.substr(mid, filter_name.find(L")", mid) - mid);
 
             std::replace(begin(filter_pattern), end(filter_pattern), ' ', ';');

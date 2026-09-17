@@ -64,8 +64,9 @@ public:
 
     QString selectFolder(const QString& folder);
     void    setTitle(const QString&);
-    void    setFormats(std::vector<int>&);
+    void    setFormats(std::vector<int>&, bool enhancedUnicodeAvailable = false);
     int     getFormat();
+    bool    isEnhancedUnicode() const;
 
 private:
     QString getFilter(const QString&) const;
