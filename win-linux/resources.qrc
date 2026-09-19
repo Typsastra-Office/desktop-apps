@@ -220,8 +220,9 @@
         <file alias="id-ID.qm">langs/id.qm</file>
         <file alias="it-IT.qm">langs/it_IT.qm</file>
         <file alias="ja-JP.qm">langs/ja.qm</file>
-        <file alias="ko-KR.qm">langs/ko.qm</file>
-        <file alias="lo-LA.qm">langs/lo.qm</file>
+<file alias="ko-KR.qm">langs/ko.qm</file>
+<file alias="km-KH.qm">langs/km.qm</file>
+<file alias="lo-LA.qm">langs/lo.qm</file>
         <file alias="lt-LT.qm">langs/lt.qm</file>
         <file alias="lv-LV.qm">langs/lv.qm</file>
         <file alias="nl-NL.qm">langs/nl.qm</file>

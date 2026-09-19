@@ -292,6 +292,7 @@ private:
         ,{"tr-TR", {"Türkçe", "Turkish"}}
         ,{"ja-JP", {"日本語", "Japanese"}}
         ,{"ko-KR", {"한국어", "Korean"}}
+        ,{"km-KH", {"ភាសាខ្មែរ", "Khmer"}}
         ,{"bg-BG", {"Български", "Bulgarian"}}
         ,{"nl-NL", {"Nederlands", "Dutch"}}
         ,{"vi-VN", {"Tiếng Việt", "Vietnamese"}}

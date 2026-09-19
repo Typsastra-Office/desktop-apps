@@ -1081,7 +1081,7 @@ begin
         RegValueExists(GetHKLM(), '{#APP_REG_PATH}', 'locale') and
             RegQueryStringValue(GetHKLM(), '{#APP_REG_PATH}', 'locale', lang)) then
   begin
-    lang := ExpandConstant('{cm:AppLocale}')
+    lang := '{#sDefaultLocale}'
   end;
 
   result := lang;
