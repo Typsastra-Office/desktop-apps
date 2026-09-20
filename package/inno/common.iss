@@ -211,7 +211,9 @@ Name: hy_AM; MessagesFile: compiler:Languages\Armenian.isl;
 Name: zh_CN; MessagesFile: compiler:Languages\ChineseSimplified.isl;
 #endif
 ;Name: hy_AM; MessagesFile: compiler:Languages\Armenian.islu;
-;Name: hr; MessagesFile: compiler:Languages\Croatian.isl;
+#if FileExists(AddBackslash(CompilerPath) + 'Languages\Croatian.isl')
+Name: hr; MessagesFile: compiler:Languages\Croatian.isl;
+#endif
 #if FileExists(AddBackslash(CompilerPath) + 'Languages\Danish.isl')
 Name: da; MessagesFile: compiler:Languages\Danish.isl;
 #endif
