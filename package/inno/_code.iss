@@ -794,7 +794,12 @@ begin
   Check := True;
 
   Check := Check and CheckAppRegData('PackageType', 'inno');
-  Check := Check and not IsMsiProductInstalled('{47EEF706-B0E4-4C43-944B-E5F914B92B79}', 0);
+  // Rebrand: the inherited check refuses to install when an MSI built from the
+  // upstream ONLYOFFICE package is present. Typsastra Office has its own AppId,
+  // registry path and URL protocol, so the two can coexist; the PackageType,
+  // PackageArch and PackageEdition checks above/below still prevent mixing
+  // installer types for this product.
+  // Check := Check and not IsMsiProductInstalled('{47EEF706-B0E4-4C43-944B-E5F914B92B79}', 0);
   if Result and not Check then
   begin
     MsgBox(ExpandConstant('{cm:ErrorMismatchInstalledType}'), mbCriticalError, MB_OK);
