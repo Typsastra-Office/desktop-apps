@@ -102,7 +102,7 @@ QPushButton#toolButtonDownload {border-left: 0px; border-right: 1px solid %6; ma
     min-height: 26px;
     padding-left: 25px; padding-right: 17px; padding-top: 0px; padding-bottom: 0px;
     color: %14;
-    font-family: "Arial", "Helvetica", "Helvetica Neue", sans-serif; font-size: 11px; font-weight: normal;
+    font-family: "Arial", "Helvetica", "Helvetica Neue", "MiSans Khmer", sans-serif; font-size: 11px; font-weight: normal;
     qproperty-alignment: AlignVCenter;
     border: none;
     background: %11;
@@ -123,7 +123,7 @@ QPushButton#toolButtonDownload {border-left: 0px; border-right: 1px solid %6; ma
     margin: 0px;
     padding-left: 10px; padding-right: 10px; padding-top: 0px; padding-bottom: 0px;
     color: %8;
-    font-family: "Arial", "Helvetica", "Helvetica Neue", sans-serif; font-size: 11px; font-weight: normal;
+    font-family: "Arial", "Helvetica", "Helvetica Neue", "MiSans Khmer", sans-serif; font-size: 11px; font-weight: normal;
     qproperty-alignment: AlignCenter;
     border: 1px solid %9; border-radius: 4px;
     background-color: %10; background-clip: border-box;

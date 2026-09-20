@@ -25,7 +25,7 @@ QFrame#mainFrame,
 QFrame#titleFrame,
 QFrame#downloadItem {background: %1;}
 
-QPushButton {border: none; color: %4; background: transparent; padding: 0px; margin: 0px; font-weight: normal; font-family: "Arial", "Helvetica", "Helvetica Neue", sans-serif;}
+QPushButton {border: none; color: %4; background: transparent; padding: 0px; margin: 0px; font-weight: normal; font-family: "Arial", "Helvetica", "Helvetica Neue", "MiSans Khmer", sans-serif;}
 CDownloadWidget[rtl-font=true] QPushButton {font-family: "Segoe UI", "Traditional Arabic", "Noto Sans";}
 QPushButton::menu-indicator {width: 0px; height: 0px;}
 QPushButton#buttonCancel {color: %1;}
@@ -35,7 +35,7 @@ QPushButton:pressed {color: %6;}
 QProgressBar {background-color: %12; border-color: %12; margin: 0px;}
 QProgressBar::chunk {background-color: %11;}
 
-QLabel {color: %8; font-family: "Arial", "Helvetica", "Helvetica Neue", sans-serif;}
+QLabel {color: %8; font-family: "Arial", "Helvetica", "Helvetica Neue", "MiSans Khmer", sans-serif;}
 CDownloadWidget[rtl-font=true] QLabel {font-family: "Segoe UI", "Traditional Arabic", "Noto Sans";}
 QLabel#labelSize,
 QLabel#labelInfo {color: %9;}

@@ -27,7 +27,7 @@ CTabBar #tabScroll>#rightButton:pressed {image: url(:/tabbar/icons/scrolltab_rp.
 
 Tab {background: %1; border: none; border-left: 0px; border-right: 1px solid %5; margin: 0px; padding: 0px;}
 Tab #tabIcon {background: transparent;}
-Tab #tabText {background: transparent; font-family: "Arial", "Helvetica", "Helvetica Neue", sans-serif;}
+Tab #tabText {background: transparent; font-family: "Arial", "Helvetica", "Helvetica Neue", "MiSans Khmer", sans-serif;}
 Tab #tabButton {border: none; margin-top: 0px; image: none; background: transparent;}
 #mainPanel[rtl=true] Tab {border-right: 0px; border-left: 1px solid %5;}
 #mainPanel[rtl-font=true] Tab #tabText {font-family: "Segoe UI", "Traditional Arabic", "Noto Sans";}

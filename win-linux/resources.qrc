@@ -1,5 +1,9 @@
 <RCC>
     <qresource prefix="/">
+        <file alias="fonts/MiSansKhmer-Regular.ttf">res/fonts/MiSansKhmer-Regular.ttf</file>
+        <file alias="fonts/MiSansKhmer-Medium.ttf">res/fonts/MiSansKhmer-Medium.ttf</file>
+        <file alias="fonts/MiSansKhmer-Semibold.ttf">res/fonts/MiSansKhmer-Semibold.ttf</file>
+        <file alias="fonts/MiSansKhmer-Bold.ttf">res/fonts/MiSansKhmer-Bold.ttf</file>
         <file>res/icons/tab_close_normal.svg</file>
         <file>res/icons/tab_close_active.svg</file>
         <file>res/icons/tab_close_hover.svg</file>

@@ -16,7 +16,7 @@ QDialog[rtl-font=true] QLabel {font-family: "Segoe UI", "Traditional Arabic", "N
 
 QAbstractButton,
 QLineEdit,
-QLabel {font-family: "Arial", "Helvetica", "Helvetica Neue", sans-serif;}
+QLabel {font-family: "Arial", "Helvetica", "Helvetica Neue", "MiSans Khmer", sans-serif;}
 
 QAbstractButton,
 QLineEdit,

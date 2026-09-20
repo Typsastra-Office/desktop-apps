@@ -47,6 +47,7 @@
 #include <QJsonArray>
 #include <QProcess>
 #include <QScreen>
+#include <QFontDatabase>
 #include <algorithm>
 #include <functional>
 
@@ -1415,6 +1416,19 @@ void CAscApplicationManagerWrapper::initializeApp()
     // Font
     QFont mainFont = QApplication::font();
     mainFont.setStyleStrategy( QFont::PreferAntialias );
+    // MiSans Khmer for Khmer script in the native (Qt) UI; Latin keeps the default font.
+    QFontDatabase::addApplicationFont(":/fonts/MiSansKhmer-Regular.ttf");
+    QFontDatabase::addApplicationFont(":/fonts/MiSansKhmer-Medium.ttf");
+    QFontDatabase::addApplicationFont(":/fonts/MiSansKhmer-Semibold.ttf");
+    QFontDatabase::addApplicationFont(":/fonts/MiSansKhmer-Bold.ttf");
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    {
+        QStringList families = mainFont.families();
+        if (!families.contains("MiSans Khmer"))
+            families.append("MiSans Khmer");
+        mainFont.setFamilies(families);
+    }
+#endif
     QApplication::setFont( mainFont );
 
     EditorJSVariables::init();
