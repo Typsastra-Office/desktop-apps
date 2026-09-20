@@ -59,13 +59,6 @@
                           <h3 style="margin-top:0;" l10n>${_lang.welWelcome}</h3>
                           <h4 class="text-description" l10n>${_lang.welDescr}</h4>
                           <imagewelcome>
-                          <div class="tools-connect">
-                            <button class="btn btn--landing newportal" l10n>${_lang.btnCreatePortal}</button>
-                            <section class="link-connect">
-                              <label l10n>${_lang.textHavePortal}</label>
-                              <a class="login link" href="#" l10n>${_lang.btnConnect}</a>
-                            </section>
-                          </div>
                         </section>
                       </div>
                     </div>`;

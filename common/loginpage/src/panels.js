@@ -68,9 +68,6 @@ $(document).ready(function() {
                 </a>
               </li>
               <li class="menu-item separator"></li>
-              <section id="idx-sidebar-portals" class="connect">
-              </section>
-              <li class="menu-item devider"></li>
               <li class="menu-item">
                   <a action="settings">
                     <div class="icon-box">
@@ -121,10 +118,11 @@ $(document).ready(function() {
     window.app.controller.about = (new ControllerAbout).init();
     window.app.controller.settings = (new ControllerSettings).init();
 
-    if (!!window.ControllerPortals)
-        window.app.controller.portals = (new ControllerPortals({
-            placeholder: '#idx-sidebar-portals',
-        })).init();
+    // Cloud (portal) support is hidden for now: no Clouds section, no connect panel.
+    // if (!!window.ControllerPortals)
+    //     window.app.controller.portals = (new ControllerPortals({
+    //         placeholder: '#idx-sidebar-portals',
+    //     })).init();
 
     !!window.ControllerExternalPanel && (window.app.controller.externalpanel = (new ControllerExternalPanel({})).init());
 
