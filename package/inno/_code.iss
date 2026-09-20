@@ -1082,11 +1082,17 @@ function getAppPrevLang(param: string): string;
 var
   lang: string;
 begin
-  if not (WizardSilent() and
-        RegValueExists(GetHKLM(), '{#APP_REG_PATH}', 'locale') and
-            RegQueryStringValue(GetHKLM(), '{#APP_REG_PATH}', 'locale', lang)) then
+  // Silent (automatic) updates keep the UI language of the installed copy;
+  // an interactive install follows the language chosen in the setup wizard.
+  if WizardSilent() and RegQueryStringValue(GetHKLM(), '{#APP_REG_PATH}', 'locale', lang) then
   begin
-    lang := '{#sDefaultLocale}'
+    lang := lang;
+  end
+  else
+  begin
+    lang := ExpandConstant('{cm:AppLocale}');
+    if (lang = '') or (Pos('-', lang) = 0) then
+      lang := '{#sDefaultLocale}';
   end;
 
   result := lang;

@@ -47,6 +47,7 @@ AppPublisherURL           = {#sAppPublisherURL}
 AppSupportURL             = {#sAppSupportURL}
 AppCopyright              = {#sAppCopyright}
 AppComments               = {cm:defprogAppDescription}
+LanguageDetectionMethod   =none
 
 DefaultGroupName          = {#sCompanyName}
 ;UsePreviousAppDir         =no
@@ -121,6 +122,9 @@ Compression=lzma2/ultra64
 LZMAUseSeparateProcess=yes
 
 [Languages]
+; Khmer is listed first and LanguageDetectionMethod is set to none, so the setup
+; defaults to Khmer; the user can still switch to any other language.
+Name: km; MessagesFile: "compiler:Default.isl,compiler:Languages\Khmer.isl";
 #ifdef _ONLYOFFICE
 Name: en; MessagesFile: compiler:Default.isl;
 #if FileExists(AddBackslash(CompilerPath) + 'Languages\Russian.isl')
