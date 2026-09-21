@@ -965,10 +965,15 @@ begin
     GetWindowsVersionEx(version);
     if (version.Major > 6) or ((version.Major = 6) and (version.Minor >= 1)) then begin
       Exec(ExpandConstant('{app}\{#iconsExe}'), '--create-jump-list', '', SW_SHOWNORMAL, ewWaitUntilTerminated, ErrorCode);
-      if CheckCommandlineParam('/noupdates') then begin
-        RegWriteDWordValue(HKEY_LOCAL_MACHINE, ExpandConstant('{#APP_REG_PATH}'), 'CheckForUpdates', 0);
-      end else
+      // Updates are disabled for now: no update service is registered and
+      // CheckForUpdates is set to 0. Pass /updates to enable them again.
+      if CheckCommandlineParam('/updates') then begin
         Exec(ExpandConstant('{app}\updatesvc.exe'), '--install "' + ExpandConstant('{cm:UpdateService}') + '."', '', SW_HIDE, ewWaitUntilTerminated, ErrorCode);
+      end else begin
+        RegWriteDWordValue(HKEY_LOCAL_MACHINE, ExpandConstant('{#APP_REG_PATH}'), 'CheckForUpdates', 0);
+        if FileExists(ExpandConstant('{app}\updatesvc.exe')) then
+          Exec(ExpandConstant('{app}\updatesvc.exe'), '--delete', '', SW_HIDE, ewWaitUntilTerminated, ErrorCode);
+      end;
     end;
 
     paramStore := GetCommandlineParam('/store');
