@@ -6,6 +6,12 @@ TEMPLATE = app
 CONFIG += app_bundle
 CONFIG += c++11
 
+# Qt 6.10 generates moc code that requires C++20 support from the compiler
+# (e.g. with MSVC 14.29 the default C++17 mode fails in qtmochelpers.h).
+greaterThan(QT_MAJOR_VERSION, 5) {
+    CONFIG += c++20
+}
+
 TRANSLATIONS = ./langs/en.ts \
                 ./langs/en_GB.ts \
                 ./langs/ru.ts \
