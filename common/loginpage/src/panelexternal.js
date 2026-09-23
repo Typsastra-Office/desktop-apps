@@ -136,8 +136,7 @@
             if ( panel_id.includes('\{B17BDC61\-') ) {
                 _encrype_workaround(_panel);
             } else
-            if ( panel_id.includes('F2402876-659F-47FB-A646-67B49F2B5AAA') ||
-                    panel_id.includes('9DC93CDB-B576-4F0C-B55E-FCC9C48DD777') )
+            if ( panel_id.includes('F2402876-659F-47FB-A646-67B49F2B5AAA') )
             {
                 const $svgicon = _panel.$menuitem.find('svg.icon');
                 if ( $svgicon.length ) {
