@@ -43,7 +43,7 @@
         <location filename="../src/cascapplicationmanagerwrapper.cpp" line="927" />
         <location filename="../src/components/asctabwidget.cpp" line="704" />
         <source>Document</source>
-        <translation>Document</translation>
+        <translation>ឯកសារ</translation>
     </message>
 </context>
 <context>
@@ -140,7 +140,7 @@
     <message>
         <location filename="../src/components/cdownloadwidget.cpp" line="259" />
         <source>Cancel</source>
-        <translation>Cancel</translation>
+        <translation>បោះបង់</translation>
     </message>
     <message>
         <location filename="../src/components/cdownloadwidget.cpp" line="278" />
@@ -156,7 +156,7 @@
     <message>
         <location filename="../src/components/cdownloadwidget.cpp" line="343" />
         <source>Open</source>
-        <translation>Open</translation>
+        <translation>បើក</translation>
     </message>
     <message>
         <location filename="../src/components/cdownloadwidget.cpp" line="359" />
@@ -429,7 +429,7 @@
     <message>
         <location filename="../src/components/cfiledialog.cpp" line="166" />
         <source>Save As</source>
-        <translation>Save As</translation>
+        <translation>រក្សាទុកជា</translation>
     </message>
     <message>
         <location filename="../src/components/cfiledialog.cpp" line="214" />
@@ -658,7 +658,7 @@
     <message>
         <location filename="../src/components/cmenu.cpp" line="374" />
         <source>Close</source>
-        <translation>Close</translation>
+        <translation>បិទ</translation>
     </message>
     <message>
         <location filename="../src/components/cmenu.cpp" line="375" />
@@ -783,7 +783,7 @@
     <message>
         <location filename="../src/cupdatemanager.cpp" line="109" />
         <source>Cancel</source>
-        <translation>Cancel</translation>
+        <translation>បោះបង់</translation>
     </message>
     <message>
         <location filename="../src/cupdatemanager.cpp" line="99" />
@@ -1012,7 +1012,7 @@
         <location filename="../src/components/cmessage.cpp" line="75" />
         <location filename="../src/components/cnotification.cpp" line="61" />
         <source>Cancel</source>
-        <translation>Cancel</translation>
+        <translation>បោះបង់</translation>
     </message>
     <message>
         <location filename="../src/components/cmessage.cpp" line="76" />
