@@ -1,10 +1,10 @@
 l10n.boxNoConnect.km = {
-    msgNoConn: 'ការតភ្ជាប់អ៊ីនធឺណិតបរាជ័យ...',
-    msgNoConnDesc: 'ពិនិត្យការតភ្ជាប់',
-    msgFileNoConn: 'ពិនិត្យការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នក',
-    msgFileNoConnDesc: "អ្នកមិនអាចកែសម្រួលឯកសារបានទេ ព្រោះការតភ្ជាប់អ៊ីនធឺណិតត្រូវបានបាត់បង់ ឬកំណត់។ សូមពិនិត្យការតភ្ជាប់របស់អ្នក ហើយបើកឯកសារឡើងវិញដើម្បីបន្ត។",
-    msgTemplatesNoConn: 'ពិនិត្យការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នក',
-    msgTemplatesNoConnDesc: "មិនអាចផ្ទុកផ្នែកនេះបានទេ ព្រោះអាចមានបញ្ហាបណ្ដាញ។ សូមពិនិត្យការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នក ហើយព្យាយាមម្តងទៀត។",
-    msgFileError: 'អូ! មានអ្វីមួយខុសបញ្ហា',
-    msgFileErrorDesc: "យើងបាត់បង់ការចូលប្រើឯកសាររបស់អ្នក ដោយសារកង្វះអង្គចងចាំ ឬហេតុផលផ្សេង។ សូមកុំបារម្ភ ហើយព្យាយាមបើកឯកសារឡើងវិញ។ បិទផ្ទាំងនេះដើម្បីបន្ត។",
+    msgNoConn: 'Internet connection failed...',
+    msgNoConnDesc: 'Check connection',
+    msgFileNoConn: 'Check your Internet connection',
+    msgFileNoConnDesc: "You are unable to edit the document because the Internet connection is lost or restricted. Please check your connection and reopen the document to continue.",
+    msgTemplatesNoConn: 'Check your Internet connection',
+    msgTemplatesNoConnDesc: "Couldn't load this section because you are experiencing possible network issues. Please check your Internet connection and try again.",
+    msgFileError: 'Oops! Something went wrong',
+    msgFileErrorDesc: "We lost access to your file due to a lack of memory or some other reason. Please don't worry and try reopening the file. Close this tab to continue.",
 }
