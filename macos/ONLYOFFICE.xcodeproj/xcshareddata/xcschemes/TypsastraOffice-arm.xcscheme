@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FCB4C6BA26DD018B0012C20D"
                BuildableName = "TypsastraOffice.app"
-               BlueprintName = "ONLYOFFICE-arm"
+               BlueprintName = "TypsastraOffice-arm"
                ReferencedContainer = "container:ONLYOFFICE.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,7 +46,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FCB4C6BA26DD018B0012C20D"
             BuildableName = "TypsastraOffice.app"
-            BlueprintName = "ONLYOFFICE-arm"
+            BlueprintName = "TypsastraOffice-arm"
             ReferencedContainer = "container:ONLYOFFICE.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -63,7 +63,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FCB4C6BA26DD018B0012C20D"
             BuildableName = "TypsastraOffice.app"
-            BlueprintName = "ONLYOFFICE-arm"
+            BlueprintName = "TypsastraOffice-arm"
             ReferencedContainer = "container:ONLYOFFICE.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
