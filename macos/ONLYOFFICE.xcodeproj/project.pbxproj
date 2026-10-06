@@ -1865,7 +1865,7 @@
 			dependencies = (
 			);
 			name = "ONLYOFFICE-v8";
-			productName = ONLYOFFICE;
+			productName = TypsastraOffice;
 			productReference = FC0BD6FB258B63F700C47F95 /* ONLYOFFICE.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -1886,7 +1886,7 @@
 			dependencies = (
 			);
 			name = "ONLYOFFICE-arm";
-			productName = ONLYOFFICE;
+			productName = TypsastraOffice;
 			productReference = FCB4C73726DD018B0012C20D /* ONLYOFFICE.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -1907,7 +1907,7 @@
 			dependencies = (
 			);
 			name = "ONLYOFFICE-x86_64";
-			productName = ONLYOFFICE;
+			productName = TypsastraOffice;
 			productReference = FCBC42681B9D650400405301 /* ONLYOFFICE.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -3157,7 +3157,7 @@
 					"-headerpad_max_install_names",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.typsastra.office;
-				PRODUCT_NAME = ONLYOFFICE;
+				PRODUCT_NAME = TypsastraOffice;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -3203,7 +3203,7 @@
 					"-headerpad_max_install_names",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.typsastra.office;
-				PRODUCT_NAME = ONLYOFFICE;
+				PRODUCT_NAME = TypsastraOffice;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -3249,7 +3249,7 @@
 					"-headerpad_max_install_names",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.typsastra.office;
-				PRODUCT_NAME = ONLYOFFICE;
+				PRODUCT_NAME = TypsastraOffice;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -3295,7 +3295,7 @@
 					"-headerpad_max_install_names",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.typsastra.office;
-				PRODUCT_NAME = ONLYOFFICE;
+				PRODUCT_NAME = TypsastraOffice;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -3421,7 +3421,7 @@
 					"-headerpad_max_install_names",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.typsastra.office;
-				PRODUCT_NAME = ONLYOFFICE;
+				PRODUCT_NAME = TypsastraOffice;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -3467,7 +3467,7 @@
 					"-headerpad_max_install_names",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.typsastra.office;
-				PRODUCT_NAME = ONLYOFFICE;
+				PRODUCT_NAME = TypsastraOffice;
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
