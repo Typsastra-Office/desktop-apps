@@ -16,12 +16,14 @@ AutoProv: no
 Provides: %{_package_opensource}
 %if "%{_package_edition}" == "commercial"
 Conflicts: %{_package_opensource}
-Obsoletes: %{_package_opensource}
+Obsoletes: %{_package_opensource} < %{_product_version}-%{_build_number}
 %else
 Conflicts: %{_package_commercial}
-Obsoletes: %{_package_commercial}
+Obsoletes: %{_package_commercial} < %{_product_version}-%{_build_number}
 %endif
+%if "%{_company_name}" == "ONLYOFFICE"
 Suggests: %{_package_opensource}-help
+%endif
 
 %description
 Open-source office suite pack that comprises all the tools you need to
@@ -80,8 +82,12 @@ rm -rf "%{buildroot}"
 %attr(-, root, root) %{_bindir}/desktopeditors
 %exclude /opt/%{_desktopeditors_prefix}/editors/web-apps/apps/*/main/resources/help
 %else
+%if "%{?_imageviewer_exec}" != ""
 %attr(755, root, root) %{_bindir}/%{_imageviewer_exec}
+%endif
+%if "%{?_videoplayer_exec}" != ""
 %attr(755, root, root) %{_bindir}/%{_videoplayer_exec}
+%endif
 %attr(-, root, root) %{_bindir}/%{_package_name}
 %attr(777, root, root) %{_sysconfdir}/%{_package_name}
 %endif
