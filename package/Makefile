@@ -115,7 +115,9 @@ RPM_PARAMS += --define '_company_name $(COMPANY_NAME)'
 RPM_PARAMS += --define '_product_name $(PRODUCT_NAME)'
 RPM_PARAMS += --define '_publisher_name $(PUBLISHER_NAME)'
 RPM_PARAMS += --define '_publisher_url $(PUBLISHER_URL)'
+ifneq ($(strip $(SUPPORT_MAIL)),)
 RPM_PARAMS += --define '_support_mail $(SUPPORT_MAIL)'
+endif
 RPM_PARAMS += --define '_package_name $(PACKAGE_NAME)'
 RPM_PARAMS += --define '_package_opensource $(PACKAGE_OPENSOURCE)'
 RPM_PARAMS += --define '_package_commercial $(PACKAGE_COMMERCIAL)'
