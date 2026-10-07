@@ -115,9 +115,6 @@ RPM_PARAMS += --define '_company_name $(COMPANY_NAME)'
 RPM_PARAMS += --define '_product_name $(PRODUCT_NAME)'
 RPM_PARAMS += --define '_publisher_name $(PUBLISHER_NAME)'
 RPM_PARAMS += --define '_publisher_url $(PUBLISHER_URL)'
-ifneq ($(strip $(SUPPORT_MAIL)),)
-RPM_PARAMS += --define '_support_mail $(SUPPORT_MAIL)'
-endif
 RPM_PARAMS += --define '_package_name $(PACKAGE_NAME)'
 RPM_PARAMS += --define '_package_opensource $(PACKAGE_OPENSOURCE)'
 RPM_PARAMS += --define '_package_commercial $(PACKAGE_COMMERCIAL)'
@@ -139,6 +136,12 @@ CHANGES_VERSIONS := $(shell echo $(PRODUCT_VERSION); { ls -1 $(CHANGES_DIR) \
 HELP_GLOB := opt/$(DESKTOPEDITORS_PREFIX)/editors/web-apps/apps/*/main/resources/help
 
 -include $(BRANDING_DIR)/branding.mk
+
+# Branding may intentionally clear the upstream default; only define the RPM
+# macro after that override has been loaded, since rpmbuild rejects an empty body.
+ifneq ($(strip $(SUPPORT_MAIL)),)
+RPM_PARAMS += --define '_support_mail $(SUPPORT_MAIL)'
+endif
 
 all : deb rpm rpm-suse tar
 deb : $(DEB)
