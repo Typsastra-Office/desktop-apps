@@ -702,7 +702,8 @@
                         }
 
                         if ( appSettings.useai !== undefined ) {
-                            $chUseAI = $('#sett-box-use-ai', $panel).parent().show().find('#sett-use-ai');
+                            var $useAIField = $('#sett-box-use-ai', $panel).closest('.settings-field').hide();
+                            $chUseAI = $('#sett-use-ai', $useAIField);
                             $chUseAI.prop('checked', !!appSettings.useai)
                                 .on('change', e => {
                                     $btnApply.isdisabled() && $btnApply.disable(false);
