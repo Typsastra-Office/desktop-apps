@@ -292,7 +292,7 @@ private:
         ,{"tr-TR", {"Türkçe", "Turkish"}}
         ,{"ja-JP", {"日本語", "Japanese"}}
         ,{"ko-KR", {"한국어", "Korean"}}
-        ,{"km-KH", {"Khmer", "Khmer"}}
+        ,{"km-KH", {"ខ្មែរ", "Khmer"}}
         ,{"bg-BG", {"Български", "Bulgarian"}}
         ,{"nl-NL", {"Nederlands", "Dutch"}}
         ,{"vi-VN", {"Tiếng Việt", "Vietnamese"}}
@@ -407,7 +407,9 @@ void CLangater::init()
     QCoreApplication::installTranslator(tr);
 
 #ifdef _WIN32
-    setNativeUILanguage(_lang.toStdWString());
+    // Keep Windows-owned file dialogs in the system UI language for Khmer.
+    if (_lang != "km-KH")
+        setNativeUILanguage(_lang.toStdWString());
 #endif
 }
 
@@ -429,7 +431,9 @@ void CLangater::reloadTranslations(const QString& lang)
     }
 
 #ifdef _WIN32
-    setNativeUILanguage(lang.toStdWString());
+    // Keep Windows-owned file dialogs in the system UI language for Khmer.
+    if (lang != "km-KH")
+        setNativeUILanguage(lang.toStdWString());
 #endif
 }
 
